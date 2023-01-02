@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>FOOD TRACEABILITY SYSTEM</title>
+ 
+                
+	</head>
+	<body>
+  <br>
+  <br>
+              <fieldset>
+             <legend><h1 style="color:white">REGISTER</h1></legend>
+		<div class="container">
+  <a class="btn btn-1" href="farmerregisterform.html">FARMER</a>
+  <a class="btn btn-2" href="factoryregisterform.html">FACTORY</a>
+  <a class="btn btn-3" href="distributorregisterform.html">DISTRIBUTOR</a>
+  <a class="btn btn-4" href="retailerregisterform.html">RETAILER</a>
+  <a class="btn btn-5" href="customerregisterform.html">CUSTOMER</a>
+
+</div>
+</fieldset>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<fieldset>
+ <legend><h1 style="color:white">PRODUCT DETAILS</h1></legend>
+<div class="container">
+  <a class="btn btn-1" href="farmerproductdetails.html">FARMER PRODUCT </a>
+   <a class="btn btn-2"  href="factoryproductdetails.html">FACTORY PRODUCT </a>
+  <a class="btn btn-3" href="distributorproductdetails.html">DISTRIBUTOR PRODUCT</a>
+  <a class="btn btn-4"  href="retailerproductdetails.html">RETAILER PRODUCT </a>
+  <a class="btn btn-5"  href="customerproductdetails.html">CUSTOMER PRODUCT </a>
+</div></fieldset>
+
+
+  
+
+<style>
+  
+body{
+  font-family: italic;
+  font-size: large ;
+  margin:0;
+  background-color: #112233;
+}
+h1{
+    font:white;
+    margin-top:20px;
+    text-align:center; 
+    
+   
+}
+legend{
+    text-align:center;
+}
+.container {
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0 auto;
+  min-height: 20vh;
+  text-shadow: 1px 1px 2px #112233;
+}
+.btn {
+  flex: 1 1 auto;
+  margin: 8px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 150% auto;
+  color: rgb(0, 0, 0);
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px rgb(94, 80, 156);
+  border-radius: 10px;
+ }
+
+.btn:hover {
+  background-position: right center; 
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #8daae9 51%, #fbc2eb 100%);
+}
+
+.btn-3 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.btn-4 {
+  background-image: linear-gradient(to right, #d4d7db 0%, #57bae7 51%, #a1c4fd 100%);
+}
+
+.btn-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #ee92f7 51%, #ffecd2 100%);
+}
+button{
+flex: 1 1;
+background-color:green;
+margin:10px;
+padding:15px;
+border-radius: 10px;
+}
+
+</style>
+
+<script>
+  function myajax() {
+   
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById(
+          "displayresult"
+        ).innerHTML = this.responseText;
+      }
+    };
+    var farmer = document.getElementById("farmerId").value;
+    console.log("farmer: ",farmer);
+
+    xhttp.open("GET", "farmerregisterform.html" + farmer, true);
+    xhttp.send();
+  }
+</script>
+	</body>
+</html>
